@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finally</title>
+</head>
+<body>
+	<h2 style="color: #3C403D;">Finally</h2>
+	<p>The "finally" block is used to execute the important code of the program. It is executed whether an exception is handled or not.
+		A finally block of code always executes, irrespective of occurrence of an Exception.Using a finally block allows you to run any 
+		cleanup-type statements that we want to execute, no matter what happens in the protected code. A finally block appears at the end of the catch blocks.
+	</p>
+	<h4>Sample Code:</h4>
+	<p style="background-color:  rgb(230, 238, 230);">
+		public class <b>ExcepTest</b> {<br>&emsp;
+			public static void main(String args[]){<br>&emsp;&emsp;
+			   int a[] = new int[2];<br>&emsp;&emsp;
+			   try {<br>&emsp;&emsp;&emsp;
+				  System.out.println("Access element three :" + a[3]);<br>&emsp;&emsp;
+			   }catch (ArrayIndexOutOfBoundsException e){<br>&emsp;&emsp;&emsp;
+				  System.out.println("Exception thrown  :" + e);<br>&emsp;&emsp;
+			   }finally {<br>&emsp;&emsp;&emsp;
+				  a[0] = 6;<br>&emsp;&emsp;&emsp;
+				  System.out.println("First element value: " + a[0]);<br>&emsp;&emsp;&emsp;
+				  System.out.println("The finally statement is executed");<br>&emsp;&emsp;
+			   }<br>&emsp;
+			}<br>
+		 }
+	</p>
+	<h4>Output:</h4>
+	<p style="background-color: honeydew;">
+		&emsp;Exception thrown  :java.lang.ArrayIndexOutOfBoundsException: 3<br>&emsp;
+		First element value: 6<br>&emsp;
+		The finally statement is executed</p>
+</body>
+</html>

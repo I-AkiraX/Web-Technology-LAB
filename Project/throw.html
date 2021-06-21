@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Throw</title>
+</head>
+<body>
+	<h2 style="color: #3C403D;">Throw</h2>
+	<p>The Java throw keyword is used to explicitly throw an exception. We can throw either checked or uncheked exception in java by throw keyword. 
+		The throw keyword is mainly used to throw custom exception. We will see custom exceptions later.</p>
+	<h4>Sample code:</h4>
+	<p style="background-color:  rgb(230, 238, 230);">
+		public class <b>TestThrow1</b>{ <br>&emsp; 
+			static void validate(int age){<br>&emsp;&emsp;
+			  if(age<18)<br>&emsp;&emsp;&emsp;
+			   <b>throw new</b> ArithmeticException("not valid");<br>&emsp;&emsp;  
+			  else <br>&emsp;&emsp;&emsp; 
+			   System.out.println("welcome to vote"); <br>&emsp; 
+			}<br>&emsp;
+			public static void main(String args[]){  <br>&emsp;&emsp;
+			   validate(13);  <br>&emsp;&emsp;
+			   System.out.println("rest of the code...");<br>&emsp;
+		   }  <br>
+		 }
+	</p>
+	<h4>Output:</h4>
+	<p style="background-color: honeydew;">&emsp;Exception in thread main java.lang.ArithmeticException:not valid</p>
+</body>
+</html>

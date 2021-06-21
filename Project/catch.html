@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Catch</title>
+</head>
+
+<body>
+    <h2 style="color: #3C403D;">Catch</h2>
+    <p>The "catch" block is used to handle the exception. It must be preceded by try block which means we can't use catch block alone. It can be followed by finally block later. A catch statement involves declaring the type of exception you are trying to
+        catch. If an exception occurs in protected code, the catch block (or blocks) that follows the try is checked. If the type of exception that occurred is listed in a catch block, the exception is passed to the catch block much as an argument is
+        passed into a method parameter.
+    </p>
+    <h4>Sample Code:</h4>
+    <p style="background-color: rgb(230, 238, 230);">class <b>Myclass</b>{<br>&emsp;public static void main (String[] args){<br>&emsp;&emsp;int[] arr = new int[4];<br> &emsp;&emsp;try{
+        <br>&emsp;&emsp;&emsp;int i = arr[4];<br>&emsp;&emsp;&emsp;System.out.println("Inside try block");<br> &emsp;&emsp;}
+        <br>&emsp;&emsp;catch(ArrayIndexOutOfBoundsException ex){<br>&emsp;&emsp;&emsp;System.out.println("Exception caught in Catch block");<br> &emsp;&emsp;}
+        <br>&emsp;&emsp;System.out.println("Outside try-catch clause");<br>&emsp;}<br>}
+    </p>
+    <h4>Output:</h4>
+    <p style="background-color: honeydew;">&emsp;Exception caught in Catch block<br>&emsp; Outside try-catch clause</p>
+    <h3>Multiple Catch Blocks</h3>
+    <h4>Sample Code:</h4>
+    <p>
+        A try block can be followed by one or more catch blocks. Each catch block must contain a different exception handler. So, if we have to perform different tasks at the occurrence of different exceptions, we can use java multi-catch block.</p>
+    <p style="background-color:  rgb(230, 238, 230);">
+        public class <b>MultipleCatchBlock1</b> {<br>&emsp; public static void main(String[] args) {<br>&emsp;&emsp; try{
+
+        <br>&emsp;&emsp;&emsp; int a[]=new int[5];<br>&emsp;&emsp;&emsp; a[5]=30/0;
+        <br>&emsp;&emsp; }
+        <br>&emsp;&emsp; catch(ArithmeticException e){<br>&emsp;&emsp;&emsp; System.out.println("Arithmetic Exception occurs");<br>&emsp;&emsp; }
+        <br>&emsp;&emsp; catch(ArrayIndexOutOfBoundsException e){<br>&emsp;&emsp;&emsp; System.out.println("ArrayIndexOutOfBounds Exception occurs");<br>&emsp;&emsp; }
+        <br>&emsp;&emsp; catch(Exception e){<br>&emsp;&emsp;&emsp; System.out.println("Parent Exception occurs"); <br>&emsp;&emsp; } <br>&emsp;&emsp; System.out.println("rest of the code"); <br>&emsp; }
+        <br> }
+    </p>
+    <h4>Output:</h4>
+    <p style="background-color: honeydew;">&emsp;Arithmetic Exception occurs<br>&emsp;rest of the code</p>
+</body>
+
+</html>

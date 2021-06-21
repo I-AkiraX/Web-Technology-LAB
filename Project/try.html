@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try</title>
+</head>
+<body>
+	<h2 style="color: #3C403D;">Try</h2>
+	<p>	The "try" keyword is used to specify a block where we should place exception code. The code which is prone to exceptions is placed in the try block. When an exception occurs, that exception occurred is handled by catch block associated with it. The try block must be followed by either catch or finally. It means, we can't use try block alone.</p>
+	<h4>Sample Code:</h4>
+	<p style="background-color: rgb(230, 238, 230);">public class <b>JavaExceptionExample</b>{<br>&emsp;public static void main(String args[]){<br>&emsp;try{<br>
+		&emsp;&emsp;  int data=100/0; <br>&emsp;}catch(ArithmeticException e){<br>&emsp;&emsp;System.out.println(e);<br>&emsp;} <br>&emsp;System.out.println("rest of the code...");<br>
+		&emsp;}<br>}
+	</p>
+	<h4 >Output:</h4>
+	<p style="background-color: honeydew;">&emsp;Exception in thread "main" java.lang.ArithmeticException: / by zero</p>
+</body>
+</html>

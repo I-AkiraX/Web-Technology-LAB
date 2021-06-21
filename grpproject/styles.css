@@ -1,0 +1,50 @@
+body {
+    background-color: lavenderblush;
+    margin: 0px;
+}
+
+h1 {
+    color: #583d72;
+    margin-top: 0px;
+}
+
+h3 {
+    color: #583d72;
+}
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: grey;
+    border-width: 5px;
+    width: 10%;
+}
+
+.top-container {
+    /* background-color: #e4f9f5;
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+    border: solid 10px;
+    padding: 20px;*/
+}
+
+.middle-container {
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    margin-left: 260px;
+    border: solid 20px;
+}
+
+.bottom-container {
+    background-color: greenyellow;
+    width: 200px;
+    height: 200px;
+    margin-left: 500px;
+    border: solid 10px;
+}
+
+.wings {
+    text-decoration: underline;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Throws</title>
+</head>
+<body>
+	<h2 style="color: #3C403D;">Throws</h2>
+	<p>
+		The Java throws keyword is used to declare an exception. It gives an information to the programmer that there may occur 
+		an exception so it is better for the programmer to provide the exception handling code so that normal flow can be maintained.
+		Using Java throws keyword Checked Exception can be propagated (forwarded in call stack). It provides information to the caller of the method about the exception.
+	</p>
+	<h4>Sample Code:</h4>
+	<p style="background-color:  rgb(230, 238, 230);">
+		import java.io.IOException;<br> 
+		class <b>Testthrows1</b>{ <br>&emsp;
+  			void m()throws IOException{ <br>&emsp;&emsp; 
+    			<b>throw new</b> IOException("device error");//checked exception<br>&emsp;
+  			}<br>&emsp;
+  			void n()throws IOException{ <br>&emsp;&emsp; 
+   			 	m();  <br>&emsp;
+  			}<br>&emsp;
+			void p(){  <br>&emsp;&emsp; 
+				try{  <br>&emsp;&emsp;&emsp;
+					n(); <br>&emsp;&emsp; 
+				}catch(Exception e){System.out.println("exception handled");} <br>&emsp; 
+			}  <br>&emsp;
+			public static void main(String args[]){ <br>&emsp;&emsp;  
+				<b>Testthrows1</b> obj=new <b>Testthrows1</b>();  
+				obj.p();  <br>&emsp;&emsp; 
+				System.out.println("normal flow..."); <br>&emsp; 
+			}  <br>
+		} 
+	</p>
+	<h4>Output:</h4>
+	<p style="background-color: honeydew;">&emsp;exception handled<br>&emsp;normal flow...</p>
+	<h4>Difference between throw and throws</h4>
+	<table style="width: 80%;" border = "1">
+		<tr>
+			<th>Throw</th>
+			<th>Throws</th>
+		</tr>
+		<tr>
+		   <td>Java throw keyword is used to explicitly throw an exception.</td>
+		   <td>Java throws keyword is used to declare an exception.</td>
+		</tr>
+		
+		<tr>
+		   <td>Checked exception cannot be propagated using throw only.</td>
+		   <td>Checked exception can be propagated with throws.</td>
+		</tr>
+		<tr>
+			<td>Throw is followed by an instance.</td>
+			<td>Throws is followed by class.</td>
+		</tr>
+		<tr>
+			<td>Throw is used within the method.</td>
+			<td>Throws is used with the method signature.</td>
+		</tr>
+		<tr>
+			<td>We cannot throw multiple exceptions.</td>
+			<td>We can declare multiple exceptions.</td>
+		</tr>
+	 </table>
+</body>
+</html>
